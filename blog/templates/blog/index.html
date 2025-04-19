@@ -608,6 +608,22 @@
             // Focus input on load
             userInput.focus();
         });
+
+        fetch('/chat/api/', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ message: userMessage }),
+})
+.then(response => response.json())
+.then(data => {
+    // Handle the response here
+    console.log(data.reply);
+})
+.catch(error => {
+    console.error('Error:', error);
+});
     </script>
 </body>
 </html>
