@@ -1,1 +1,2 @@
-chatbot-env/
+chatbot-env/,.env/
+.env
